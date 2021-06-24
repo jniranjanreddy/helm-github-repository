@@ -34,6 +34,20 @@ total 12
 -rw-r--r-- 1 root root  379 Jun 24 11:42 index.yaml
 -rw-r--r-- 1 root root   25 Jun 24 11:29 README.md
 
+[root@k8s-helm helm-github-repository]# helm repo list
+NAME    URL
+stable  https://charts.helm.sh/stable
+local   http://127.0.0.1:8879/charts
+
+[root@k8s-helm helm-github-repository]# helm repo add --username jniranjanreddy --password <token> helm-github-repository 'https://raw.githubusercontent.com/jniranjanreddy/helm-github-repository/master'
+"helm-github-repository" has been added to your repositories
+
+[root@k8s-helm helm-github-repository]# helm repo list
+NAME                    URL
+stable                  https://charts.helm.sh/stable
+local                   http://127.0.0.1:8879/charts
+helm-github-repository  https://raw.githubusercontent.com/jniranjanreddy/helm-github-repository/master
+[root@k8s-helm helm-github-repository]#
 
 
 ```
